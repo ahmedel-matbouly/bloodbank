@@ -1,0 +1,14 @@
+<?php
+
+namespace App\model;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Token extends Model
+{
+    protected $fillable = array('token','type');
+    public function client()
+    {
+        return $this->belongsTo('App\model\Client');
+    }
+}
